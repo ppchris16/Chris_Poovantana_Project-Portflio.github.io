@@ -1,0 +1,322 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Technical Projects</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="Aboutme.html" class="logo">About Me</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="Mainport.html">Technical Work Experince</a></li>
+							<li class="active"><a href="TechnicalProject.html">Technical Projects Experince</a></li>
+							<li><a href="Otherwork.html">Other Work Experience</a></li>
+							<li><a href="Aboutme.html">About Me</a></li>
+
+						</ul>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/ppongsakorn16/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+							<li><a href="https://github.com/ppchris16" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="https://www.instagram.com/ppchris16/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="https://www.facebook.com/pongsakorn.poovantana/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<section class="post">
+						<!-- Box1 -->
+						<header>
+							<h2>Titan Endurance Project</h2>
+							<p>MECH 223: Introduction to Mechanical Design
+								@ University of British Columbia<br>
+								<span class="date">January 2023 - April 2023</span></p>
+						</header>
+						
+						<div class="box">
+							<p><span class="image left"><img src="images/titan1.png" alt="" /></span>
+								
+								As part of my second year mechanical engineering design course project, I worked with a group of 6 engineering students to design, 
+								develop and construct a 2 body project that resemble a spacecraft landing on a Saturn’s moon. 
+								This project consists of 2 independent body that are together. 
+								<br>This project consists of 2 independent body that are together.
+											<ul>
+												<li>First is the “orbiter” where the orbiter resemble the spacraft vehicle that will autonomously
+													launched by its stored energy launching mechanism.</li>
+												<li>On the orbiter, the second body call “lander launcher” is on, where the lander launcher is responsible to 
+													deploy the randomly assigned spherical object of various size and dimension on the target.</li>
+											</ul>
+								Everything need to be mechanical and no source of electricity can be used
+  								to activate the launching mechanism. We also able to construct our project using a biodegradable material, resulting an increase in score in sustainability criteria by 30%.
+
+								<br><br><h3>Lander Launching Spring Calculation</h3>
+								<span class="image right"><img src="images/plot1.jpg" alt="" style="width: 500; height: auto; border: 1.5px solid black;"/></span>
+								<p>I took on the challenge of creating an Excel sheet that performed complex calculations to determine the precise spring force necessary for launching landers of different sizes, 
+								masses, and materials. This involved meticulously analyzing the spring constant requirements based on the unique properties of each lander. Upon collecting the data, 
+								I conducted a comprehensive data analysis, delving into the correlation between spring deflection and lander velocity. To illustrate these findings, I generated graphical representations, 
+								highlighting the relationship visually. This undertaking demonstrated my proficiency in data-driven engineering, problem-solving, and effective communication through visual representation.
+								</p>
+
+								<h3>Prototyping the lander launching mechanism</h3>
+								  <div style="display: flex; justify-content: center;">
+									<video controls width="600" height="300">
+									  <source src="video/v11.mp4" type="video/mp4">
+									  Your browser does not support the video tag.
+									</video>
+								  </div>
+								  
+								 <br> The lander launching mechanism was a critical project element, using a precisely calculated compression spring for deploying landers of various sizes and materials. 
+								  The V-shaped pathway design allowed versatile and minimal contact deployment. Our innovative 3D-printed launching gate ensured stability, employing plastic soldering for robustness. 
+								  This mechanism showcased our engineering precision, adaptability, and modern manufacturing techniques for successful lander deployment.
+
+								  <br><h3>Competition</h3>
+								  <div style="display: flex; justify-content: center;">
+									<video controls width="600" height="300">
+									  <source src="video/v22.mp4" type="video/mp4">
+									  Your browser does not support the video tag.
+									</video>
+								  </div>
+
+								<br>This project introduces a way to properly manage and allocate tasks and resources. It also help me to gain experiences using machines tool like drill press, bandsaw, 3d printer, laser and water jet cutter to construct the prototype and final design.
+</p>
+						</div>
+
+	
+
+						<!-- Box2 -->
+						<header>
+							<h2>MATLAB Beam Deflection, CalculationProject</h2>
+							<p>UBC Solar Design Team<br>
+								@ University of British Columbia<br>
+								<span class="date">Summer 2023</span></p>
+						</header>
+						<div class="box">
+							<p>
+								As part of my responsibilities in UBC Solar Design Team, i recognized thethe need for enhanced efficiency and accuracy in analyzing chassis tube 
+								and support structure properties, I undertook the development of a MATLAB code. This code streamlines the time-consuming manual calculations 
+								of critical factors such as bending moment, stress, and deflection. 
+								By inputting specific parameters and design variables, the MATLAB code employs advanced approximation techniques 
+								to rapidly solve for these crucial mechanical characteristics.
+							<!-- Preformatted Code -->
+							<h2>Beanding Moment Calculatin Sample</h2>
+							<pre><code>
+% Define beam properties
+length = 5;         % Length of the beam (in meters)
+E = 2e11;           % Young's modulus of the material (in N/m^2)
+ro = 0.05; % Outer radius of the hollow tube (in meters)
+ri = 0.04; % Inner radius of the hollow tube (in meters)
+
+% Calculate moment of inertia of the hollow tube
+I = (pi / 4) * (ro^4 - ri^4);
+
+% Define loading conditions
+x = 2;  % Position where the load is applied (in meters)
+P = 1000;  % Transverse load applied (in Newtons)
+
+% Define analysis parameters
+num_points = 100;   % Number of points for discretization
+
+% Calculate beam deflection using Euler-Bernoulli beam theory
+x = linspace(0, length, num_points);  % Discretized beam length
+deflection = zeros(size(x));
+
+	for i = 1:num_points
+   		 if x(i) <= x
+       		deflection(i) = (P * x(i)^2 * (3 * x - x(i))) / (6 * E * I * length);
+    	else
+        	deflection(i) = (P * x^2 * (3 * x(i) - x)) / (6 * E * I * length);
+    	end
+	end
+
+% Plot the deflection profile
+figure;
+plot(x, deflection);
+title('Hollow Tube Deflection Profile');
+xlabel('Position along the beam (m)');
+ylabel('Deflection (m)');
+grid on;
+</code></pre></p>
+</div>
+						
+
+						<!-- Box3 -->
+						<header>
+							<h2>Arduino-Powered RC Aircraft Project</h2>
+							<p>Personal Project<br>
+								<span class="date">Summer2022</span></p>
+						</header>
+						
+						<div class="box">
+							<p><span class="image left"><img src="images/board2.jpg" alt="" /></span>
+								I undertook a project to conceive and build an Arduino-controlled RC airplane, aiming to merge innovative technology with practical application. I initiated the 
+								venture by seamlessly integrating Arduino as the central controller, enabling precise and adaptable management of the aircraft's functions.
+								 This encompassed the design and realization of the airplane's transmitter and receiver signal system, intricately interwoven with Arduino and 
+								 intricate electrical circuitry. Leveraging my expertise in microcontrollers, NRF24L01 wireless communication modules, and diagnostic tools like multimeters 
+								 and oscilloscopes, I ensured the accurate and reliable transmission of signals between the Arduino-powered transmitter and the onboard receiver. 
+								 Furthermore, I spearheaded the development of diverse prototype aircraft, orchestrating the harmonious integration of electronics, sensors,
+								  and communication modules into the aircraft's structural framework. Through this iterative approach, I continually refined flight control,
+								   stability, and communication, resulting in a highly functional and innovative RC airplane. This project not only underscores my adeptness
+								    at combining cutting-edge technology with practical engineering but also highlights my commitment to pushing the boundaries of conventional
+									 RC aircraft design, all while exemplifying my passion for aviation and electronics.
+
+									<br>
+									<div style="text-align: center;">
+										<img src="images/planeboard.png" alt="" style="width: 500px; height: auto; border: 1.5px solid black;" />
+									</div>
+									</p>
+						</div>
+
+						<!-- Box4 -->
+						<header>
+							<h2>Autonomous Claw Project </h2>
+							<p>APSC101: Introduction to Engineering Design II<br>
+								@ University of British Columbia<br>
+								<span class="date">January 2022-April 2022</span></p>
+						</header>
+						<div class="box">
+							<p><span class="image left"><img src="images/claw.jpg" alt="" /></span>
+								During my first year of engineering, I had the incredible opportunity to be part of a dynamic team comprising six talented students, 
+								working on an autonomous claw project. This endeavor was all about designing and bringing to life a cardboard claw capable of picking up a diverse array of objects. 
+								Our aim was to create a device that combined the power of a power bank with the ingenuity of a programmed Arduino Uno and a servomotor sensor.
+
+								<br>The journey began with brainstorming sessions where each team member contributed their unique ideas and perspectives.
+								It was fascinating to witness the amalgamation of these ideas into a cohesive plan that would guide our project. 
+
+								<br>One of the most captivating aspects of the project was the iterative design process. 
+								We didn't just settle for the first design; instead, we delved into <strong>prototype testing and analysis</strong>>. 
+								This involved experimenting with various claw designs, ensuring they were optimized to pick up objects of varying sizes –
+								 from the small to the considerably larger ones. This phase demanded meticulous attention to detail, as we fine-tuned the claw's mechanics and movements 
+								 to ensure its efficiency and accuracy.
+
+								<br>Through this project, I developed not only technical skills but also soft skills that are crucial in any collaborative setting. 
+								Effective communication became the backbone of our team's progress. We had to regularly update each other on our individual tasks, align our
+								 efforts towards the overarching goal, and troubleshoot any obstacles together. This experience was a real-world lesson in teamwork, requiring us to synergize our 
+								 strengths and work cohesively towards success.
+
+								<br>As we advanced from the planning and sketching stages to actual manufacturing, I found myself immersed in the hands-on aspect of engineering. 
+								Constructing the claw from cardboard, integrating the electronic components, and seeing our creation come to life was a gratifying experience 
+								that bridged the gap between theoretical knowledge and practical application.
+
+								<br>Of course, no project is without its fair share of challenges. Our team encountered hurdles along the way, from technical glitches to design refinements. 
+								Yet, it was in these moments of problem-solving that I truly grasped the essence of engineering – the ability to identify issues, analyze them critically, and devise
+								 effective solutions.
+								
+								 <h3>During the Claw competition</h3>
+								  <div style="display: flex; justify-content: center;">
+									<video controls width="600" height="300">
+									  <source src="video/v4.mp4" type="video/mp4">
+									  Your browser does not support the video tag.
+									</video>
+								  </div>
+
+								<br>Looking back, this autonomous claw project stands as a testament to my growth as an engineer and as an individual. 
+								It taught me the art of transforming abstract ideas into tangible realities, while fostering a deep appreciation for collaboration, communication, and adaptability. 
+								The skills I honed during this project, from coding to hands-on construction, continue to serve as pillars of my engineering journey, propelling me forward with confidence
+								 and enthusiasm.</p>
+						</div>
+
+						<!-- Box5 -->
+						<header>
+							<h2>Water Bottle Rocket Project</h2>
+							<p>@ Ramkhamhaend Advent International School<br>
+								<span class="date">Spring 2018</span></p>
+						</header>
+						<div class="box">
+							<p><span class="image left"><img src="images/rocket2.jpg" alt="" /></span>
+								My enthusiasm for machinery and aerospace was kindled during my high school years.
+								One standout experience was during a design course where my team and I undertook the exciting challenge of 
+								creating a water bottle rocket capable of flying in a predetermined direction and maintaining flight for an extended duration. 
+								Our mission encompassed not only building the rocket but also producing a comprehensive report detailing the design and the physics
+								intricately woven into the experiment.
+
+								<br>A tangible embodiment of our efforts is illustrated in the right figure, showcasing a 
+								snapshot of the water bottle rocket project I was involved in. The focal point of this endeavor lay in 
+								illuminating core principles of physics such as Newton's Third Law of Action and Reaction, along with the Bernoulli principle. 
+								Beyond the scientific aspect, our team embarked on a digital journey, utilizing virtual software to meticulously simulate the ideal 
+								trajectory of the rocket before embarking on the physical construction.
+								<span class="image right"><img src="images/planecalculation.png" alt="" style="width: 500; height: auto; border: 1.5px solid black;"/></span>
+								
+								
+								<br>The scientific and physical dimensions of the project beckoned exploration. 
+								In a quest to optimize the rocket's design, I delved into external research, 
+								particularly investigating the influence of the nose cone on the rocket's flight trajectory. 
+								This curiosity was ignited by the conventional use of round-nosed aircraft and the scarcity of blunt noses in aviation.
+								 My investigation encompassed diverse nose cone shapes—round (parabolic), bullet, and blunt. After a series of methodical trials,
+								  it was evident that the parabolic shape yielded the most favorable results.
+								
+								</p>
+								<br>
+								<div style="text-align: center;">
+									<img src="images/rocket1.jpg" alt="" style="width: 500px; height: auto; border: 1.5px solid black;" />
+								</div>
+						</div>
+
+					</div>
+
+
+						<!--<p><span class="image left"><img src="images/pic08.jpg" alt="" /></span>[add text]</p>
+						<p><span class="image right"><img src="images/pic09.jpg" alt="" /></span>[add text]</p>-->
+
+					</section>
+				<!-- Footer -->
+				<footer id="footer">
+					<section class="alt">
+						<h3>Address</h3>
+						<p>3-123 Johnson Street<br />
+						Coqutilam, BC V3B 7C9</p>
+					</section>
+					<section>
+						<h3>Phone</h3>
+						<p><a href="tel:+12368837418">+1(236)-883-7418</a></p>
+					</section>
+					<section>
+						<h3>Professinal Email</h3>
+						<p><a href="mailto:ppchris@student.ubc.ca">ppchris@student.ubc.ca</a><br>
+						<a href="mailto:pongsakornbaiioon@gmail.com">pongsakornbaiioon@gmail.com</p>
+						
+						
+					</section>
+					<section>
+						<h3>Social</h3>
+						<ul class="icons alt">
+							<li><a href="https://www.linkedin.com/in/ppongsakorn16/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+							<li><a href="https://github.com/ppchris16" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="https://www.instagram.com/ppchris16/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="https://www.facebook.com/pongsakorn.poovantana/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+						</ul>
+					</section>
+				
+				</footer>
+
+
+				<!-- Copyright -->
+				<div id="copyright">
+					<ul><li>&copy; ppchris</li><li>Design: <a href="https://www.linkedin.com/in/ppongsakorn16/">Chris Poovantana</a></li></ul>
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
